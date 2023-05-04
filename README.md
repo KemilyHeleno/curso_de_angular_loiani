@@ -89,5 +89,9 @@ Uma forma de associar informações que estão no componente para o template e v
 * Formato padrão é através de `bind-nomePropriedade <img bind-src="urlImg"/>`
 * Quando não existe propriedade no elemento, usa-se `[`**`attr`**`.colspan]`
 
-## Aula 11 - Event Binding (Binding de Eventos)
+## Aula 12 - Two-way Data Binding
+
+* Valor do Template para o Componente e vice-versa
+* Usa-se binding de eventos + propriedades
+* Sintaxe "Banana na caixa - [()] - usada pelo método Two-Way Data Binding
 
