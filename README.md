@@ -95,3 +95,9 @@ Uma forma de associar informações que estão no componente para o template e v
 * Usa-se binding de eventos + propriedades
 * Sintaxe "Banana na caixa - [()] - usada pelo método Two-Way Data Binding
 
+## Aula 14 - Emitindo Eventos com Output Properties
+
+### Criando Componentes Reutilizáveis
+* Componente Customizado:
+Objetivo: Disarar um evento "mudou" toda vez que o usuário clilcar nos botões + ou -.  
+Evento recebe novo valor do input.  
