@@ -4,7 +4,7 @@ https://loiane.training/continuar-curso/angular
 https://github.com/loiane/curso-angular2  
 https://www.youtube.com/watch?v=tPOMG0D57S0&list=PLGxZ4Rq3BOBoSRcKWEdQACbUCNWLczg2G  
 
-# Módulo 1 do Curso **Introdução**
+# Módulo 1 do Curso - **Introdução**
 ## Aula 1
 
 * Introdução
@@ -66,7 +66,7 @@ TypeScript é transcrito para JavaScript.
 * Sublime Text - Precisa de um pluggin para o TypeScript - https://github.com/microsoft/typescript-sublime-plugin - pago
 
 
-# Módulo 2 do Curso **Data Binding**
+# Módulo 2 do Curso - **Data Binding**
 
 ## Aula 9 - Property Biding (Binding de propriedades) + Interpolação
 
@@ -89,5 +89,5 @@ Uma forma de associar informações que estão no componente para o template e v
 * Formato padrão é através de `bind-nomePropriedade <img bind-src="urlImg"/>`
 * Quando não existe propriedade no elemento, usa-se `[`**`attr`**`.colspan]`
 
-## Aula 10 - Class e Style Binding (Binding de classes e estilos)
+## Aula 11 - Event Binding (Binding de Eventos)
 

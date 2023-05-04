@@ -9,12 +9,35 @@ export class DataBindingComponent {
   url: string = 'http://loiane.com';
   cursoAngular = true;
   urlImagem = 'http://lorempixel.com.br/400/200/nature/'
+
+  valorAtual: any = '';
+  valorSalvo: any = '';
+
+  isMouseOver: boolean = false;
+
   getValor() {
     return 1;
   }
 
-  getCurtirCurso(){
+  getCurtirCurso() {
     return true;
+  }
+
+  botaoClicado() {
+    alert('Botão Clicado!');
+  }
+
+  onKeyUp(evento: KeyboardEvent) {
+    console.log();
+    this.valorAtual = (<HTMLInputElement>evento.target).value;
+  }
+
+  salvarValor(valor: string) {
+    this.valorSalvo = valor;
+  }
+
+  onMouseOverOut() {
+    this.isMouseOver = !this.isMouseOver;
   }
 
 }
