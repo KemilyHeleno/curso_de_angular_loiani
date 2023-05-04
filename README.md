@@ -101,3 +101,14 @@ Uma forma de associar informações que estão no componente para o template e v
 * Componente Customizado:
 Objetivo: Disarar um evento "mudou" toda vez que o usuário clilcar nos botões + ou -.  
 Evento recebe novo valor do input.  
+
+## Aula 15 - Ciclo de Vida do Componente
+### Life Cycle Hooks
+* 1 - `ngOnChanges` - Antes #2 e quando valor `property-binding` é atualizado
+* 2 - `ngOnInit` - Quando Component é inicializado
+* 3 - `ngDoCheck` - A cada ciclo de verificação de mudanças
+* 4 - `ngAfterContentInit` - Depois de inserir conteúdo externo na view
+* 5 - `ngAfterContentChecked` - A cada verificação de conteúdo inserido
+* 6 - `ngAfterViewChecked` - A cada verificação de conteúdo / conteúdo filho
+* 7 - `ngOnDestroy` - Antes da diretiva / Componente ser destruído
+
