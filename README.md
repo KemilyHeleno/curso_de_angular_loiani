@@ -65,6 +65,9 @@ TypeScript é transcrito para JavaScript.
 * WebStorm - Suporta TypeScript - gratuito
 * Sublime Text - Precisa de um pluggin para o TypeScript - https://github.com/microsoft/typescript-sublime-plugin - pago
 
+
+# Módulo 2 do Curso **Data Binding**
+
 ## Aula 9 - Property Biding (Binding de propriedades) + Interpolação
 
 No angular existem 4 formas de fazer o data binding  
