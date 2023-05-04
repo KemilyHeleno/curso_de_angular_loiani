@@ -1,5 +1,5 @@
 <section class="property-hinding">
-
+  <!--
     <article>
       <h3>Interpolação / Interpolation</h3>
       <p> String renderizada com interpolação: {{ url }}</p>
@@ -7,14 +7,52 @@
       <p> Resultado de 1 + 1 não é {{ 1 + 1 + getValor() }}</p>
       <p> Curso de Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}</p>
     </article>
+  -->
+
+  <!-- <article> -->
+  <!-- <h3>Property Binding</h3> -->
+  <!-- Três formas diferentes de trazer a Url da imagem para o template -->
+  <!-- <img src="{{ urlImagem }}"> Interpolação -->
+  <!-- <img [src]="urlImagem"> art binding -->
+  <!-- <img bind-src="urlImagem"> HTML -->
+  <!-- Qualquer uma das três formas pode ser utilizada e serátrazido o mesmo resultado -->
+  <!-- </article> -->
+
 
   <article>
-  <h3>Property Binding</h3>
-  <!-- Três formas diferentes de trazer a Url da imagem para o template -->
-  <img src="{{ urlImagem }}"> <!-- Interpolação -->
-  <img [src]="urlImagem"> <!-- art binding -->
-  <img bind-src="urlImagem"> <!-- HTML -->
-  <!-- Qualquer uma das três formas pode ser utilizada e serátrazido o mesmo resultado -->
-  </article>
+    <h3>Class e Style Binding</h3>
+    <div>
+      Selecione uma classe:
+      <select #classe (change)="0">
+        <option value="alert-success">Sucesso</option>
+        <option value="alert-info">Informações</option>
+        <option value="alert-warning">Alerta</option>
+        <option value="alert-danger">Erro</option>
+      </select>
+      <br><br>
 
+      <div class="alert {{ classe.value }}" role="alert">
+        Texto colorido conforme valor do combobox
+      </div>
+
+      <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">
+        Sucesso
+      </div>
+      <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert-info'">
+        Informações
+      </div>
+      <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">
+        Alerta
+      </div>
+      <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">
+        Erro
+      </div>
+
+      <div class="alert" role="alert"
+      [style.display]="classe.value == 'alert-danger' ? 'block' : 'none' ">
+        Esse texto só aparece em caso de Erro.
+      </div>
+
+    </div>
+  </article>
 </section>
