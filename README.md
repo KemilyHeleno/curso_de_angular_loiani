@@ -249,3 +249,32 @@ A documentação é a sua melhor amiga!
 Desenvolva o hábito de ler os docs!  
 > https://angular.io/docs  
 
+## Aula 22 - Angular CLI: Gerando o build de produção
+
+###Gerando o Build de Desenvolvimento
+
+```
+cd NomeProjeto
+ng build --target=development --environment=dev
+ng build --dev --e=dev
+ng build --dev 
+ng build
+```
+
+### Build de Dev
+* Útil para integrar o código do ANgular 2 com o projeto de backend (PHP, Java, .NET, Python, Ruby, etc...)
+* Código que dá pra debugar
+* Arquivo main.bundle.js contém todo o código do projeto + CSS + HTML (legível)
+
+### Gerando o Build de Produção
+```
+cd NomeProjeto
+ng build --target=production --environment=prod
+ng build --prod --env=prod
+ng build --prod
+```
+
+### Build de Prod
+* Ofusca e minifica o código JS da aplicação
+* CSS e templates HTML já minificados e incluídos em main.bundle.js
+
