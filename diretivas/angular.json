@@ -5,7 +5,11 @@
   "projects": {
     "diretivas": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "component": {
+          "styleext": "sccs"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",

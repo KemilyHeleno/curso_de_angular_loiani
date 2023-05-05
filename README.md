@@ -134,3 +134,52 @@ Para fazer a instalação do Angular CLI `npm install -g angular-cli`
 * Class - `ng g class minha-classe`
 * Interface - `ng g interface minha-interface`
 * Enum (Enumeradores) - `ng g enum meu-enum`
+
+## Aula 19 - Angular CLI: Usando Sass, Less ou Stylus
+
+### Escolhendo o Pré-Processador do CLI
+Ao gerar um novo Projeto: 
+* `ng new meu-projeto --style=sass`
+* `ng new meu-projeto --style=less`
+* `ng new meu-projeto --style=stylus`
+
+Em um projeto existente: 
+* `ng config defaults.styleExt scss`
+* `ng config defaults.styleExt less`
+* `ng config defaults.styleExt styl`
+
+**Warning** - Quando eu uso o comando: ng set defaults.styleExt scss. Está sendo apresentado no terminal, o erro: "Error: Unknown command. Did you mean test?". Como posso corrigir isso?
+
+**Note** - Esse erro pode ocorrer se você estiver executando o comando `ng set defaults.styleExt scss` em uma versão desatualizada do Angular CLI.  
+O comando `ng set` foi removido na versão 12 do Angular CLI e substituído pelo comando `ng config`. Portanto, se você estiver usando uma versão mais recente do Angular CLI, tente usar o seguinte comando em vez disso:  
+```
+ng config defaults.styleExt scss
+```
+Isso deve definir a extensão padrão dos arquivos de estilo para SCSS na sua aplicação Angular.  
+Se você ainda estiver usando uma versão mais antiga do Angular CLI e o comando `ng set` não estiver funcionando, tente atualizar para a versão mais recente do Angular CLI usando o seguinte comando:  
+```
+npm install -g @angular/cli@latest  
+```
+Isso deve atualizar o Angular CLI para a versão mais recente e permitir que você use o comando `ng set` sem erros.  
+
+**Warning** - Quando uso o comando: `ng config defaults.styleExt scss`,
+apresenta o erro: "`Error: Schema validation failed with the following errors:`  
+`Data path "" must NOT have additional properties(defaults).`" no terminal  
+Como posso resolver?  
+
+**Note** - Esse erro pode ocorrer se a versão do Angular CLI que você está usando não suportar a opção `defaults.styleExt` na configuração.  
+Para resolver esse problema, você pode tentar atualizar para a versão mais recente do Angular CLI executando o seguinte comando:  
+```
+npm install -g @angular/cli@latest  
+```
+Isso deve instalar a versão mais recente do Angular CLI e permitir que você use o comando `ng config defaults.styleExt scss` sem erros.  
+Se a atualização não resolver o problema, verifique se você está executando o comando `ng config` na raiz do projeto Angular e se o arquivo `angular.json` está presente nessa pasta.  
+Outra opção é editar manualmente o arquivo `angular.json` e adicionar a configuração `styleExt` para definir a extensão padrão dos arquivos de estilo. Para fazer isso, abra o arquivo `angular.json` e localize a seção `"schematics": { "component": { ... } }`. Adicione a propriedade `"styleExt": "scss"` dentro dessa seção, conforme mostrado abaixo:  
+```
+"schematics": {
+  "component": {
+    "styleext": "scss"
+  }
+}
+```
+Salve o arquivo e reinicie o servidor de desenvolvimento do Angular se ele estiver em execução. Com essa configuração, o comando `ng generate component` criará novos componentes com arquivos de estilo SCSS por padrão.  
