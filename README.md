@@ -112,3 +112,4 @@ Evento recebe novo valor do input.
 * 6 - `ngAfterViewChecked` - A cada verificação de conteúdo / conteúdo filho
 * 7 - `ngOnDestroy` - Antes da diretiva / Componente ser destruído
 
+## Aula 16 - Acesso ao DOM e ao template com ViewChild
