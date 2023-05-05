@@ -4,7 +4,7 @@ https://loiane.training/continuar-curso/angular
 https://github.com/loiane/curso-angular2  
 https://www.youtube.com/watch?v=tPOMG0D57S0&list=PLGxZ4Rq3BOBoSRcKWEdQACbUCNWLczg2G  
 
-# Módulo 1 do Curso - **Introdução**
+# Módulo 1 - Introdução
 ## Aula 1
 
 * Introdução
@@ -66,7 +66,7 @@ TypeScript é transcrito para JavaScript.
 * Sublime Text - Precisa de um pluggin para o TypeScript - https://github.com/microsoft/typescript-sublime-plugin - pago
 
 
-# Módulo 2 do Curso - **Data Binding**
+# Módulo 2 - Data Binding
 
 ## Aula 9 - Property Biding (Binding de propriedades) + Interpolação
 
@@ -112,4 +112,12 @@ Evento recebe novo valor do input.
 * 6 - `ngAfterViewChecked` - A cada verificação de conteúdo / conteúdo filho
 * 7 - `ngOnDestroy` - Antes da diretiva / Componente ser destruído
 
-## Aula 16 - Acesso ao DOM e ao template com ViewChild
+# Módulo 3 - Angular CLI
+
+## Aula 17 - Angular CLI: Instalação e criação de projetos ng, new, ng init e ng serve
+
+Para fazer a instalação do Angular CLI `npm install -g angular-cli`  
+**Note** Para que o funcinamento do CLI seja efetivo é importante que a máquina esteja com o Node atualizado no mínimo para a versão 4  
+
+**Note** Documentação do Angular CLI - https://github.com/angular/angular-cli  
+
