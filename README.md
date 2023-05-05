@@ -121,3 +121,16 @@ Para fazer a instalação do Angular CLI `npm install -g angular-cli`
 
 **Note** Documentação do Angular CLI - https://github.com/angular/angular-cli  
 
+## Aula 18 - Criando componentes services e pipe
+`cd NomeProjeto` 
+`ng generate component meu-primeiro`
+`ng g component meu-primeiro`
+
+### Criando arquivos - Angular CLI
+* Component - `ng g component meu-component`
+* Service - `ng g service meu-servico`
+* Directive - `ng g directive minha-diretiva`
+* Pipe - `ng g pipe meu-pipe`
+* Class - `ng g class minha-classe`
+* Interface - `ng g interface minha-interface`
+* Enum (Enumeradores) - `ng g enum meu-enum`
