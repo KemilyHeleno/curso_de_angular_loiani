@@ -278,3 +278,5 @@ ng build --prod
 * Ofusca e minifica o código JS da aplicação
 * CSS e templates HTML já minificados e incluídos em main.bundle.js
 
+## Aula 23 - Angular CLI: Instalando bibliotecas (boostrap, jquery, materialize CSS, holdash, etc)
+
