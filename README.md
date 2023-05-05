@@ -346,3 +346,28 @@ template:
   Interagem com a view e modificam a estrutura do DOM e/ou código HTML (*ngFor *ngIf)
 - Diretivas de Atributos:  
   Interagrm com o elemento em que foram aplicadas (ng-class ng-style)
+
+## Aula 25 - `*ngIf`
+
+### Condicional IF
+
+```
+var cursos = []
+
+if (cursos.length > 0){ // se sim, isso
+    // alguma lógica de programação
+
+} else { // se não, aquilo
+    // alguma outra lógica de progrmação
+}
+```
+
+### \*ngIf X hidden
+
+- `[hidden]` - Recomendado para árvore de elementos pequena
+- `*ngIf` - Recomendado para árvore de elementos grandes
+
+### \*ngIf X hidden - Exceção
+
+- `[hidden]` - é menos custoso usar o [hidden] caso o custo de criar a árvore de elementos seja grande
+- `*ngIf` - em casos de necessidade de manter a segurança, o *ngIf se torna mais atrativo, já que o [hidden] esconde a informação mas a mantém no console, enquanto o *ngIf oculta a informação como se ela nem existisse.
