@@ -371,3 +371,20 @@ if (cursos.length > 0){ // se sim, isso
 
 - `[hidden]` - é menos custoso usar o [hidden] caso o custo de criar a árvore de elementos seja grande
 - `*ngIf` - em casos de necessidade de manter a segurança, o *ngIf se torna mais atrativo, já que o [hidden] esconde a informação mas a mantém no console, enquanto o *ngIf oculta a informação como se ela nem existisse.
+
+## Aula 26 - ng Switch e ngSwitchCase
+
+### Condicional Switch-case comum
+
+```
+var viewMode = 'mapa';
+
+switch (viewMode) {
+  case 'mapa': //lógica mapa;
+    break;
+  case 'lista': // lógica lista;
+    break;
+  default: //lógica padrão
+}
+```
+

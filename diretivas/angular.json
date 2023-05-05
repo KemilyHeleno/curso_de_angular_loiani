@@ -36,12 +36,7 @@
               "../diretiva/node_modules/jquery/dist/jquery.js",
               "../diretiva/node_modules/tether/dist/tether.js",
               "../diretivas/node_modules/bootstrap/dist/js/bootstrap.js"
-            ],
-            "environments": {
-              "source": "environments/environment.ts",
-              "dev": "environments/environment.ts",
-              "prod": "environments/environment.prod.ts"
-            }
+            ]
           },
           "configurations": {
             "production": {
