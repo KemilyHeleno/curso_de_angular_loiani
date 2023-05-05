@@ -182,3 +182,7 @@ Em um projeto existente:
 > }
 > ```
 > Salve o arquivo e reinicie o servidor de desenvolvimento do Angular se ele estiver em execução. Com essa configuração, o comando `ng generate component` criará novos componentes com arquivos de estilo SCSS por padrão.  
+
+## Aula 20 - Angular CLI: ng lint, ng teste, ng e2e
+
+* lint - escanea o código na buscar de pequenos erros que seriam dificilmente encontrados pelo programador
