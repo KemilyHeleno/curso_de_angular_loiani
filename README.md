@@ -186,3 +186,66 @@ Em um projeto existente:
 ## Aula 20 - Angular CLI: ng lint, ng teste, ng e2e
 
 * lint - escanea o código na buscar de pequenos erros que seriam dificilmente encontrados pelo programador
+
+## Aula 21 - Angular CLI: Estrutura do Projeto
+
+### Para que serve o Angular CLI?
+* Cria toda a estrutura do Projeto
+* Gera página HTML inicial, arquivos TypeScript iniciais, arquivos CSS e arquivos de testes unitários
+* Cria arquivo package.json com todas as dependências do Angular 2
+* Instala todas as dependências do node (`npm install`)
+* Configura o Karma para executar os testes unitários com Jasmine
+* Configura o Protactor para executar os testes end-to-end (e2e)
+* Inicializa um repositório git no projeto e faz o commit inicial
+* Cria todos os arquivos necessários para fazer o build da aplicação para produção
+
+### Estrutura de Diretórios do Projeto
+* **config** - diretório que contém configuração para deploy/buil e teste
+* **dist** - diretório onde é gerado o build da aplicação. Ignorado pelo git
+* **e2e** - diretório que contém os scripts para testes end-to-end
+* **node_modules** - diretorio que conteém os pacotes npm da app (package.json). Também ignorado pelo git
+* **public** - diretório genérico que contém um arquivo .npmignore
+* **src** - diretório do código fonte da aplicação. Contém código typescript/javascript, CSS, imagens e templates HTML
+* **angular-cli.json** - arquivo que contém informações sobre o projeto e build de produção, como nome do projeto, config de onde encontrar os arquivos fontes da app, config de testes, etc...
+* **tslint.json** - arquivo que contém configurações para fazer lint da app
+
+### Estrutura package.json
+**Dependencies X DevDependencies**
+* **Dependencies**: Dependências necessárias para executar a aplicação.
+* **DevDependencies**: Dependências necessárias para desenvolver a aplicação (não necessárias após o build de produção).
+
+#### Estrutura package.json: Dependencies
+* **@angular/core** - pacote principal do framework Angular 2. Contém decorators e metadados, Component, Directive, injeção de dependência e os hooks de ciclo de vida do Component.
+* **@angular/compiler** - Serviços, pipes e diretivas comuns fornecidas pelo time de dev do Angular.
+* **@angular/compiler** - Template de compilação do angular. Entende o código dos templates e converte em código que faz a app ser executada e renderizada. Desenvolvedores não interagem com esse pacoite diretamente (apenas usamos seu código)
+* **@angular/forms** - Contém todo o código para construção de formulários no angular 2
+* **@angularplataform-browser** - Contém todo o código relacionado ao DOM e ao browser, especialmente as partes que ajudam a renderizar o DOM. Esse pacote também contém o método para fazer o bootstrap da aplicação para builds de produção que pré-compila os templates
+* **@angular/plataform-browser-dynamic** - Contém os Providers e o método para iniciar as aplicações que compilam templates no lado di cliente. Não usa compilação offline. Usada para fazer bootstrap durante desenvolvimento e exemplos plunker.
+* **@angular/http** - Fornece o cliente HTTP
+* **@angular/router** - Classes de Roteamento
+
+#### Estrutura package.json: Dependencies: Polyfills
+* **core-js** - Biblioteca que permite compatibilidade de engines JS antigas com a especificação do ES 2015, ou seja, emula as funcionalidades do ES 2015 (ES6) e ES7 em browsers que suportam somente ES5.
+* **reflect-metadata** - Dependência compartilhada entre o Angular e o compilador TypeScript. Permite o uso de decorators no código (annotations). Isso permite ao desenvolvedores fazer upgrade no TypeScript sem precisar de fazer upgrade no Angular. esse é o motivo desta ser uma dependência da aplicação e não do Angular.
+* **rxjs** - Extensão para a especificação dos Observables (programação assíncrona). Reactive extensions for JavaScript.
+* **ts-helpers** - Biblioteca auxiliar que permite otimização de código typescript quando o mesmo é compilado para ES5.
+* **zone.js** - Extensão (plugins) útil para tarefas assíncronas (chamadas de Zones).
+* **@types/jasmine**: Definição Jasmine para typescript (antigo typings)
+* **@types/protractor**: Definição protractor para typescript (antigo typings)
+* **angular-cli**: Ferramenta de linha de comando para gerencia projetos angular 2
+* **codelyzer**: lint (análise de código) para angular 2
+* **jasmine-core**: Arquivos principais jasmines para node.js
+* **jasmine-spec-reporter**: Relatório em tempo real para BDD com Jasmine
+* **karma**: Ferramenta de testes que cria um web server e executa código de teste em cada um dos browsers conectados
+* **karma-chrome-launcher**: launcher do karma para o chrome
+* **karma-jasmine**: Adaptador para o Jasmine
+* **karma-remap-instabul**: Adaptador para code coverage (relatório)
+* **prostractor**: Framework de teste end to end (integração) para angular
+* **ts-node**: Módulo typescript para node.js
+* **ts-lint**: Lint (análise de código) para typescript
+* **typescript**: Compilador TypeScript
+
+A documentação é a sua melhor amiga!  
+Desenvolva o hábito de ler os docs!  
+> https://angular.io/docs  
+
