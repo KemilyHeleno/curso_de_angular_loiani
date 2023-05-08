@@ -9,7 +9,9 @@ export class OperadorElvisComponent {
   tarefa = {
     desc: 'Descrição da tarefa',
     responsavel: {
-      usuario: null
+      usuario: {
+        nome: 'Kemily'
+      }
     }
     // responsavel: {
     //   nome: 'Kemily'
