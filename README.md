@@ -398,11 +398,30 @@ for (let i = 0; i < cursos.length; i++) {
 }
 ```
 
-## Aula 28 - Sobre o \* e template
+## Aula 28 - Sobre o **`*`** e template
 
 Diretivas: o por que de usar o **`*`** antes das diretivas e **`<template>`**
-Não colocar o ngSwitchCase e o ngSwitchDefault na mesma tag quando for utilizar sem o \*
+Não colocar o ngSwitchCase e o ngSwitchDefault na mesma tag quando for utilizar sem o **`*`**
 
-## Aula 36 - Criando uma diretiva de estrutura (ngElse)
+# Módulo 4 - Serviços
 
-Criando uma diretiva de estrutura customizada: ngElse
+## Aula 37 - Introdução a Serviços (Service)
+
+### Serviços - Buscar/Enviar Dados Servidor
+
+Componente -> Serviço (Service) -> Backend
+
+> **Note** Serviço/Service:
+> Pode ser injetado em outras classes
+
+> **Note** Backend:
+> - Node.js
+> - Java
+> - .Net
+> - Ruby
+> - Python  
+
+### Serviços - Dry: don't repeat yourself!
+Não repita você mesmo, não repita código na sua aplicação  
+Utilize serviços, pois o mesmo serviço pode ser utilizado em diversos componentes.  
+
