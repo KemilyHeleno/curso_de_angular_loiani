@@ -9,9 +9,9 @@ export class DiretivaNgifComponent {
 
   cursos: string[] = ["Angular 2"];
 
-  mostrarCursos: boolean = false;
+  mostrarCursos = false;
 
-  onMostrarCursos(){
+  onMostrarCursos() {
     this.mostrarCursos = !this.mostrarCursos
   }
 }
