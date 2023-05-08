@@ -388,7 +388,7 @@ switch (viewMode) {
 }
 ```
 
-## Aula 27 - ngFor
+## Aula 27 - Diretivas - ngFor
 
 ### Loop For Comum
 
