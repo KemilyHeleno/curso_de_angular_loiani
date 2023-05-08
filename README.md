@@ -388,5 +388,12 @@ switch (viewMode) {
 }
 ```
 
-## Aula 30 - ngStyle
+## Aula 27 - ngFor
 
+### Loop For Comum
+
+```
+for (let i = 0; i < cursos.length; i++) {
+  let curso = cursos[i];
+}
+```
