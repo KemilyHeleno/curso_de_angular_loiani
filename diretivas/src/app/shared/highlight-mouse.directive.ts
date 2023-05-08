@@ -2,8 +2,8 @@ import {
   Directive,
   HostListener,
   HostBinding,
-  ElementRef,
-  Renderer2
+  // ElementRef,
+  // Renderer2
 } from '@angular/core';
 
 @Directive({
@@ -27,15 +27,14 @@ export class HighlightMouseDirective {
     //   'white');
 
     this.backgroundColor = 'white';
-
   }
 
   @HostBinding('style.backgroundColor') backgroundColor!: string;
 
-  constructor(
+  // constructor(
     // private elementRef: ElementRef,
     // private renderer: Renderer2
 
-  ) { }
+  // ) { }
 
 }
