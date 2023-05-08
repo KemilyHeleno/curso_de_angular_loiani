@@ -33,8 +33,8 @@
               "../diretivas/node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": [
-              "../diretiva/node_modules/jquery/dist/jquery.js",
-              "../diretiva/node_modules/tether/dist/tether.js",
+              "../diretivas/node_modules/jquery/dist/jquery.js",
+              "../diretivas/node_modules/tether/distt/js/tether.js",
               "../diretivas/node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           },
