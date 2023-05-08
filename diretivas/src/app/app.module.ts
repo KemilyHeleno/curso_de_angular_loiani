@@ -10,6 +10,7 @@ import { DiretivaNgclassComponent } from './diretiva-ngclass/diretiva-ngclass.co
 import { DiretivaNgstyleComponent } from './diretiva-ngstyle/diretiva-ngstyle.component';
 import { DiretivaNgforComponent } from './diretiva-ngfor/diretiva-ngfor.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

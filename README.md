@@ -401,3 +401,4 @@ for (let i = 0; i < cursos.length; i++) {
 Diretivas: o por que de usar o **`*`** antes das diretivas e **`<template>`**
 Não colocar o ngSwitchCase e o ngSwitchDefault na mesma tag quando for utilizar sem o *
 
+## Aula 29 - Diretivas - ngClass

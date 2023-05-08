@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./diretiva-ngclass.component.css']
 })
 export class DiretivaNgclassComponent {
-  meuFavorito: boolean = false;
+  meuFavorito = false;
 
   onClick() {
     this.meuFavorito = !this.meuFavorito
