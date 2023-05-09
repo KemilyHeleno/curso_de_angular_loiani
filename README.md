@@ -487,4 +487,6 @@ Por padrão, quando uma classe é instânciada nmo providers, ela é executada u
 })
 ```
 
-## Aula 42 - Injetando um serviço em outro serviço
+# Módulo 5 - Pipe (Filtros)
+
+## Aula 43 - Usando pipes, parâmetros e pipes aninhados
