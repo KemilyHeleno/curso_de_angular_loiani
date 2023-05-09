@@ -415,13 +415,32 @@ Componente -> Serviço (Service) -> Backend
 > Pode ser injetado em outras classes
 
 > **Note** Backend:
+>
 > - Node.js
 > - Java
 > - .Net
 > - Ruby
-> - Python  
+> - Python
 
 ### Serviços - Dry: don't repeat yourself!
-Não repita você mesmo, não repita código na sua aplicação  
-Utilize serviços, pois o mesmo serviço pode ser utilizado em diversos componentes.  
 
+Não repita você mesmo, não repita código na sua aplicação  
+Utilize serviços, pois o mesmo serviço pode ser utilizado em diversos componentes.
+
+## Aula 38 - Criando um Serviço (Service)
+
+- Construtor - Primeiro método a ser executado por ser o construtor da classe, é o que vai construir a classe, o que vai criá-la
+
+Até pela lógica ele é o primeiro a ser executado, pois não há como executar um método em uma classe que ainda não existe
+
+- ngOnInit - Primeiro método executado assim que a classe é inicializada (depois do construtor)
+
+Até por que, assim como o JavaScript o TypeScript também funciona em ordem de acordo com a ordem do código (existem exceções de funções/classes que são executados primeiro, mas em geral eles são executados na ordem em que estão escritos)
+
+```
+constructor() {
+ }
+
+ngOnInit() {
+}
+```
