@@ -489,4 +489,5 @@ Por padrão, quando uma classe é instânciada nmo providers, ela é executada u
 
 # Módulo 5 - Pipe (Filtros)
 
-## Aula 43 - Usando pipes, parâmetros e pipes aninhados
+## Aula 45 - Aplicando Locale (internacionalização) nos Pipes
+
