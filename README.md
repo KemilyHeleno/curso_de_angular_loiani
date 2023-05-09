@@ -456,9 +456,10 @@ Classe <---------- OutraClasse
 Suponhamos que exista uma ClasseA e uma ClasseB, porém para que a ClasseA funcione ela depende da ClasseB
 
 ### Injetando Depnedências na Classe
-
+```
         Dependência
 Classe <-------------- OutraClasse
+```
 
 > **Note**: No exemplo acima, OutraClasse injeta a dependência automáticamente
 
