@@ -486,3 +486,5 @@ Por padrão, quando uma classe é instânciada nmo providers, ela é executada u
   providers: [CursosService]
 })
 ```
+
+## Aula 42 - Injetando um serviço em outro serviço
