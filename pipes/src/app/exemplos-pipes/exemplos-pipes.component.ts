@@ -14,5 +14,15 @@ export class ExemplosPipesComponent {
     dataLancamento: new Date(2018, 1, 18),
     url: 'https://a.co/d/28niSeC'
   };
+
+  livros: string[] = ['É assim que acaba', 'É assim que começa'];
+  filtro: any;
+
+  addCurso(valor: any){
+    console.log('Eu estou aqui: ' + valor)
+
+    this.livros.push(valor);
+
+  }
 }
 
