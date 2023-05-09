@@ -456,8 +456,9 @@ Classe <---------- OutraClasse
 Suponhamos que exista uma ClasseA e uma ClasseB, porém para que a ClasseA funcione ela depende da ClasseB
 
 ### Injetando Depnedências na Classe
+
 ```
-        Dependência
+         Dependência
 Classe <-------------- OutraClasse
 ```
 
@@ -470,3 +471,18 @@ No conceito de injeção de dependências, existem três maneiras de fazer isso:
 - Construtores
 - Métodos Setters
 - Atributos
+
+## Aula 40 - Escopo de Instâncias de serviços e módulos (singleton e várias instâncias)
+
+Padrão Singleton: Apenas uma única instância da classe para toda a aplicação, não importando onde esse serviço será declarado.  
+Porém, como uma forma de boa prática (e até de funcionalidade) quando quiser que o serviço funcione em toda a aplicação, delcare-a no provider do `app.module.ts`, mas se quiser que funcione apenas em uma classe específica, você pode declarar ela em seu próprio módulo ou no `app.module.ts` (fica a seu critério).  
+Por padrão, quando uma classe é instânciada nmo providers, ela é executada uma única vez no início da aplicação, mas caso sua aplicação precise que ela seja executada mais de uma vez, a classe pode ser instânciada no @Component (abaixo das url's), por exemplo:
+
+```
+@Component ({
+  selector: 'app-cursos',
+  templateUrl: './cursos.component.html',
+  styleUrls: ['./cursos.component.css'],
+  providers: [CursosService]
+})
+```
