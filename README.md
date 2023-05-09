@@ -444,3 +444,28 @@ constructor() {
 ngOnInit() {
 }
 ```
+
+## Aula 39 - Injeção de Dependência (DI) + como usar um serviço em um componente
+
+### O que é dependência?
+
+Classe1 precisa da OutraClasse para funcionar
+
+Classe <---------- OutraClasse
+
+Suponhamos que exista uma ClasseA e uma ClasseB, porém para que a ClasseA funcione ela depende da ClasseB
+
+### Injetando Depnedências na Classe
+
+        Dependência
+Classe <-------------- OutraClasse
+
+> **Note**: No exemplo acima, OutraClasse injeta a dependência automáticamente
+
+Não devemos instanciar OutraClasse manualmente, para seguir as boas práticas existe uma forma mais limpa, organizada e didática para fazer essa instância.
+
+No conceito de injeção de dependências, existem três maneiras de fazer isso:
+
+- Construtores
+- Métodos Setters
+- Atributos
