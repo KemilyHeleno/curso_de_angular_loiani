@@ -489,4 +489,5 @@ Por padrão, quando uma classe é instânciada nmo providers, ela é executada u
 
 # Módulo 5 - Pipe (Filtros)
 
-## Aula 47 - Pipes Impuros
+## Aula 48 - Pipes: Async (Assíncrono)
+Serve para fazer a saída de um valor em um template, mesmo que a saída demore para sair
