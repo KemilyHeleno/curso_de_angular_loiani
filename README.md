@@ -489,4 +489,4 @@ Por padrão, quando uma classe é instânciada nmo providers, ela é executada u
 
 # Módulo 5 - Pipe (Filtros)
 
-## Aula 46 - Pipes Puros (Criando um Pipe de Filtro)
+## Aula 47 - Pipes Impuros

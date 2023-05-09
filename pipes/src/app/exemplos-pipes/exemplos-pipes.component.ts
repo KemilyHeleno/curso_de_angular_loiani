@@ -18,11 +18,24 @@ export class ExemplosPipesComponent {
   livros: string[] = ['É assim que acaba', 'É assim que começa'];
   filtro: any;
 
-  addCurso(valor: any){
+  addCurso(valor: any) {
     console.log('Eu estou aqui: ' + valor)
 
     this.livros.push(valor);
+    console.log(this.livros);
+  }
 
+  //Jeito certe de se fazer um filtro com pipe ♥
+  obterCursos() {
+    if (this.livros.length === 0 || this.filtro === null || this.filtro.trim() === '') {
+      return this.livros;
+    }
+    return this.livros.filter((v: any) => {
+      if (v.toLocaleLowerCase().indexOf(this.filtro.toLowerCase()) >= 0) {
+        return true;
+      }
+      return false
+    });
   }
 }
 
