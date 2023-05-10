@@ -514,5 +514,5 @@ SPA's - Single Page Applications - Projetos de uma única página
 > |  /usuario/:id/edit         -->             UsuarioFormComponente         |
 > |__________________________________________________________________________|
 
-## Aula 51  - RouterLink - Definindo rotas no código
+## Aula 52 - Rotas: Aplicando CSS em rotas ativas
 
