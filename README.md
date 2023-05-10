@@ -490,4 +490,28 @@ Por padrão, quando uma classe é instânciada nmo providers, ela é executada u
 # Módulo 5 - Pipe (Filtros)
 
 ## Aula 48 - Pipes: Async (Assíncrono)
+
 Serve para fazer a saída de um valor em um template, mesmo que a saída demore para sair
+
+# Módulo 6 - Rotas
+
+## Aula 49 - Rotas: Introdução
+
+SPA's - Single Page Applications - Projetos de uma única página
+
+### Como funciona o roteamento
+
+> http://meuprojeto.com.br/**usuarios** --> ListaUsuariosComponent
+> |
+> -> Quando você carrega o **/usuarios\*\* você quer que um determinado componenet seja mostrado em uma lista de usuários e você vai programar esse componente para que ele mostr essa lista de usuários
+
+> http://meuprojeto.com.br/**`usuarios`**/`2`/`edit` --> O angular vai ler a rota, identificar a rota e carregar o componente resposável por essa rota de acordo com a configuração realizada.
+
+> ___________________________________________________________________________
+> |                                                                          |
+> |  /usuarios                 -->             ListaUsuariosComponente       |
+> |  /usuarios/:id             -->             UsuarioDetalhesComponente     |
+> |  /usuario/:id/edit         -->             UsuarioFormComponente         |
+> |__________________________________________________________________________|
+
+
