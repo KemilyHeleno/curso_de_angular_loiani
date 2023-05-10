@@ -503,7 +503,7 @@ SPA's - Single Page Applications - Projetos de uma única página
 
 > http://meuprojeto.com.br/**usuarios** --> ListaUsuariosComponent
 > |
-> -> Quando você carrega o **/usuarios\*\* você quer que um determinado componenet seja mostrado em uma lista de usuários e você vai programar esse componente para que ele mostr essa lista de usuários
+> -> Quando você carrega o **`/usuarios`** você quer que um determinado componenet seja mostrado em uma lista de usuários e você vai programar esse componente para que ele mostr essa lista de usuários
 
 > http://meuprojeto.com.br/**`usuarios`**/`2`/`edit` --> O angular vai ler a rota, identificar a rota e carregar o componente resposável por essa rota de acordo com a configuração realizada.
 
@@ -514,5 +514,5 @@ SPA's - Single Page Applications - Projetos de uma única página
 > |  /usuario/:id/edit         -->             UsuarioFormComponente         |
 > |__________________________________________________________________________|
 
-## Aula 52 - Rotas: Aplicando CSS em rotas ativas
+## Aula 53 - Rotas: Definindo e extraindo parâmetros de roteamento
 
