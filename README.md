@@ -501,11 +501,12 @@ SPA's - Single Page Applications - Projetos de uma única página
 
 ### Como funciona o roteamento
 
-> http://meuprojeto.com.br/**usuarios** --> ListaUsuariosComponent
-> |
-> -> Quando você carrega o **`/usuarios`** você quer que um determinado componenet seja mostrado em uma lista de usuários e você vai programar esse componente para que ele mostr essa lista de usuários
+> http://meuprojeto.com.br/**usuarios** --> ListaUsuariosComponent  
+</br>
 
-> http://meuprojeto.com.br/**`usuarios`**/`2`/`edit` --> O angular vai ler a rota, identificar a rota e carregar o componente resposável por essa rota de acordo com a configuração realizada.
+> -> Quando você carrega o `/usuarios` você quer que um determinado componenet seja mostrado em uma lista de usuários e você vai programar esse componente para que ele mostr essa lista de usuários
+
+> http://meuprojeto.com.br/`usuarios`/`2`/`edit` --> O angular vai ler a rota, identificar a rota e carregar o componente resposável por essa rota de acordo com a configuração realizada.
 ```
 ___________________________________________________________________________
 |                                                                          |
