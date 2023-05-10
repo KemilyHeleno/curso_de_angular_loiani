@@ -515,6 +515,5 @@ SPA's - Single Page Applications - Projetos de uma única página
 > |__________________________________________________________________________|
 
 
-## Aula 55 - Rotas Imperativas: Redirecionamento via código
-
+## Aula 56 - Rotas: Definindo e extraindo parâmetros de url (query)
 
