@@ -1,4 +1,4 @@
-import { routing } from './app.routing';
+// import { routing } from './app.routing';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -28,7 +28,8 @@ import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    routing
+    // routing,
+    AppRoutingModule
   ],
   providers: [CursosService],
   bootstrap: [AppComponent]
