@@ -514,5 +514,5 @@ SPA's - Single Page Applications - Projetos de uma única página
 > |  /usuario/:id/edit         -->             UsuarioFormComponente         |
 > |__________________________________________________________________________|
 
-## Aula 53 - Rotas: Definindo e extraindo parâmetros de roteamento
+## Aula 54 - Escutando mudanças nos parâmetros de roteamento
 
