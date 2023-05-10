@@ -514,5 +514,7 @@ SPA's - Single Page Applications - Projetos de uma única página
 > |  /usuario/:id/edit         -->             UsuarioFormComponente         |
 > |__________________________________________________________________________|
 
-## Aula 54 - Escutando mudanças nos parâmetros de roteamento
+
+## Aula 55 - Rotas Imperativas: Redirecionamento via código
+
 
