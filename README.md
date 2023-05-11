@@ -518,6 +518,13 @@ ___________________________________________________________________________
 ```
 
 
-## Aula 58 - Criando um módulo de funcionalidade
+## Aula 59 - Criando um módulo de rotas de funcionalidade
 
+### forRoot X forChild  
 
+* **forRoot** - é usado para configurar um módulo que deve ser importado no módulo raiz da aplicação, geralmente o `AppModule`. Ele é chamado somente uma vez no momento da inicialização da aplicação, normalmente no arquivo `app.module.ts`. O `forRoot`pode ser usado para definir configurações globais para aplicação, como provedores de serviços e configurações de rotas.
+* **forClhid** - é usado para configurar um módulo que será importado em outros módulos que não sejam o módulo raiz, geralmente módulos de recursps ou de funcionalidades específicas. É chamado em outros módulos da aplicação que não sejamo módulo raiz. O `forChild` é usado para definir configurações específicas de cada módulo filho, como rotas e ser viços específicos.
+
+### Resumindo...
+
+Em reusmo, o `forRoot` é usado para configurar um módulo que deve ser importado apenas uma vz na aplicação, enquanto o `forChild` é usado para configurar um módulo que será importado em vários módulos filhos da aplicação.
