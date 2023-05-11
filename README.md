@@ -528,3 +528,6 @@ ___________________________________________________________________________
 ### Resumindo...
 
 Em reusmo, o `forRoot` é usado para configurar um módulo que deve ser importado apenas uma vz na aplicação, enquanto o `forChild` é usado para configurar um módulo que será importado em vários módulos filhos da aplicação.
+
+## Aula 60 - Rotas Filhas
+
