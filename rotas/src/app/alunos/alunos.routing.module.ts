@@ -1,15 +1,26 @@
-import { NgModule } from "@angular/core";
-import { RouterModule } from "@angular/router";
-import { AlunosComponent } from "./alunos.component";
-import { AlunoDetalheComponent } from "./aluno-detalhe/aluno-detalhe.component";
-import { AlunoFormComponent } from "./aluno-form/aluno-form.component";
+// import { AlunosDeactivateGuard } from './../guards/alunos-deactivate.guard';
+// import { AlunosGuard } from './../guards/alunos.guard';
+import { AlunoFormComponent } from './aluno-form/aluno-form.component';
+import { AlunoDetalheComponent } from './aluno-detalhe/aluno-detalhe.component';
+import { AlunosComponent } from './alunos.component';
+import { RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
+// import { AlunoDetalheResolver } from './guards/aluno-detalhe.resolver';
 
 const alunosRoutes: any = [
   {
-    path: 'alunos', component: AlunosComponent, children: [
-      { path: 'alunos/novo', component: AlunoFormComponent },
-      { path: 'alunos/:id', component: AlunoDetalheComponent },
-      { path: 'alunos/:id/editar', component: AlunoFormComponent },
+    path: '', component: AlunosComponent,
+    // canActivatedChild: [AlunosGuard],
+    children: [
+      { path: 'novo', component: AlunoFormComponent },
+      {
+        path: ':id', component: AlunoDetalheComponent,
+        // resolve: { aluno: AlunoDetalheResolver }
+      },
+      {
+        path: ':id/editar', component: AlunoFormComponent,
+        // canDeactivate: [AlunosDeactivateGuard]
+      },
     ]
   }
 ];
