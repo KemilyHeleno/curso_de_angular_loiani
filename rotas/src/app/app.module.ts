@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app.routing.module';
 import { RouterModule } from '@angular/router';
 import { AlunosModule } from './alunos/alunos.module';
+import { AuthService } from './login/auth.service';
 // import { CursosModule } from './cursos/cursos.module';
 
 @NgModule({
@@ -28,7 +29,7 @@ import { AlunosModule } from './alunos/alunos.module';
     // CursosModule,
     RouterModule.forRoot([])
   ],
-  providers: [],
+  providers: [AuthService],
   //providers: [CursosService],
   bootstrap: [AppComponent]
 })
