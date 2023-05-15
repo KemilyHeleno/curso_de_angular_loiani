@@ -11,7 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app.routing.module';
 import { RouterModule } from '@angular/router';
 import { AlunosModule } from './alunos/alunos.module';
-import { CursosModule } from './cursos/cursos.module';
+// import { CursosModule } from './cursos/cursos.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { CursosModule } from './cursos/cursos.module';
     HttpClientModule,
     AppRoutingModule,
     AlunosModule,
-    CursosModule,
+    // CursosModule,
     RouterModule.forRoot([])
   ],
   providers: [],

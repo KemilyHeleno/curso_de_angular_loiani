@@ -502,11 +502,12 @@ SPA's - Single Page Applications - Projetos de uma única página
 ### Como funciona o roteamento
 
 > http://meuprojeto.com.br/ `usuarios` --> ListaUsuariosComponent  
-</br>
+> </br>
 
 > -> Quando você carrega o `/usuarios` você quer que um determinado componenet seja mostrado em uma lista de usuários e você vai programar esse componente para que ele mostr essa lista de usuários
 
 > http://meuprojeto.com.br/ `usuarios` / `2` / `edit` --> O angular vai ler a rota, identificar a rota e carregar o componente resposável por essa rota de acordo com a configuração realizada.
+
 ```
 ___________________________________________________________________________
 |                                                                          |
@@ -517,17 +518,15 @@ ___________________________________________________________________________
 
 ```
 
-
 ## Aula 59 - Criando um módulo de rotas de funcionalidade
 
-### forRoot X forChild  
+### forRoot X forChild
 
-* **forRoot** - é usado para configurar um módulo que deve ser importado no módulo raiz da aplicação, geralmente o `AppModule`. Ele é chamado somente uma vez no momento da inicialização da aplicação, normalmente no arquivo `app.module.ts`. O `forRoot`pode ser usado para definir configurações globais para aplicação, como provedores de serviços e configurações de rotas.
-* **forClhid** - é usado para configurar um módulo que será importado em outros módulos que não sejam o módulo raiz, geralmente módulos de recursps ou de funcionalidades específicas. É chamado em outros módulos da aplicação que não sejamo módulo raiz. O `forChild` é usado para definir configurações específicas de cada módulo filho, como rotas e ser viços específicos.
+- **forRoot** - é usado para configurar um módulo que deve ser importado no módulo raiz da aplicação, geralmente o `AppModule`. Ele é chamado somente uma vez no momento da inicialização da aplicação, normalmente no arquivo `app.module.ts`. O `forRoot`pode ser usado para definir configurações globais para aplicação, como provedores de serviços e configurações de rotas.
+- **forClhid** - é usado para configurar um módulo que será importado em outros módulos que não sejam o módulo raiz, geralmente módulos de recursps ou de funcionalidades específicas. É chamado em outros módulos da aplicação que não sejamo módulo raiz. O `forChild` é usado para definir configurações específicas de cada módulo filho, como rotas e ser viços específicos.
 
 ### Resumindo...
 
 Em reusmo, o `forRoot` é usado para configurar um módulo que deve ser importado apenas uma vz na aplicação, enquanto o `forChild` é usado para configurar um módulo que será importado em vários módulos filhos da aplicação.
 
-## Aula 61 - Rotas Filhas: Desenvolvendo as telas
-
+## Aula 62 - Rotas - Dica de Performance: Carregamento sob demanda (lazy loading)
