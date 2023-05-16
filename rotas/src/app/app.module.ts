@@ -15,6 +15,7 @@ import { AuthService } from './login/auth.service';
 import { AuthGuard } from './guards/auth.guard';
 import { CursosGuard } from './guards/cursos.guard';
 import { AlunosGuard } from './guards/alunos.guard';
+import { AlunoDetalheResolver } from './alunos/guards/aluno-detalhe.resolver';
 // import { CursosModule } from './cursos/cursos.module';
 
 @NgModule({
@@ -30,15 +31,17 @@ import { AlunosGuard } from './guards/alunos.guard';
     AppRoutingModule,
     AlunosModule,
     // CursosModule,
-    RouterModule.forRoot([])
+    RouterModule.forRoot([]),
+
   ],
   providers: [
     AuthService,
     AuthGuard,
     CursosGuard,
-    AlunosGuard
+    AlunosGuard,
+    AlunoDetalheResolver
   ],
   //providers: [CursosService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,]
 })
 export class AppModule { }

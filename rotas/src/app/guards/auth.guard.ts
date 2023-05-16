@@ -15,6 +15,7 @@ export class AuthGuard implements CanActivate {
 
 
   canActivate(): Observable<boolean> | boolean {
+    console.log('AuthGuard')
 
     if (this.AuthService.usuarioEstaAutenticado()) {
       return true;
