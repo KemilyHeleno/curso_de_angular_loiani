@@ -529,4 +529,42 @@ ___________________________________________________________________________
 
 Em reusmo, o `forRoot` é usado para configurar um módulo que deve ser importado apenas uma vz na aplicação, enquanto o `forChild` é usado para configurar um módulo que será importado em vários módulos filhos da aplicação.
 
-## Aula 63 - Rotas: Tela de Login e como não mostrar o Menu
+## Aula 64 - Usando Guarda de Rotas: CanActivate
+
+Na versão mais recente do Angular (Angular 12), você pode substituir o uso do `CanActivate` pelo uso d `CanActivatedChild` e `CanLoad`, depejndendo do seu caso de uso específico. Aqui está uma breve explicação sobre cada um deles:  
+* 1 - `CanActivatedChild`: Este guarda de rota é usado quando você deseja controlar o acesso a rotas filhas de um determinado componente. Ele verifica se o usuário tem permissão para ativar as rotas filho. Para usar o `CanActivatedChild`, você precisa implementar a interface `CanActivatedChild` e definir a lógica de autorização no método `canActivatedChild()`.  
+
+Exemplo de uso: 
+```
+import { Injectable } from '@angular/core';  
+import { CanActivatedChild, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';  
+
+@Injectable()
+export class MyAuthGuard implements CanActivateChild {
+  canActivateChild(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): boolean {
+      // Lógica de autorização aqui
+      return true; // ou false, dependendo da lógica implementada
+    }
+}
+```
+
+* 2 - `CanLoad`: Este guiarda de rota é usado quando você deseja controlar o acesso ao carregamento de módulos de rotas assíncronos (lazy-loading modules). Ele verifica se o usuário tem permissão para carregar o módulo.  
+Para usar o `CanLoad`, você precisa implementar a interface `CanLoad` e definir a lógica de autorização no método `canLoad()`.  
+
+Exemplo de uso:
+```
+import { Injectable } from '@angular/core';
+import { CanLoad, Route } from '@angular/router';
+
+@Injectable()
+export class MyAuthGuard implements CanLoad {
+  canLoad(route: Route): boolean {
+    // Lógica de autorizazção aqui
+    return true; // ou false, dependendo da lógica implementada
+  }
+}
+```
+
+LEmbrando que esses são apenas exemplos básicos e você precisará adaptá-los de acordo com as suas necessidades específicas de autenticação e autorização. Além disso, é necessário fornecer esses guards no módulo de rotas, na propriedade `canActivateChild` ou `canLoad`, respectivamente, para que sejam aplicados corretamente nas rotas desejadas.
