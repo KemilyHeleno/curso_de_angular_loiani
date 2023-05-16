@@ -19,12 +19,12 @@ const alunosRoutes = [
         path: ':id', component: AlunoDetalheComponent,
         // canActivatedChild: [AlunosGuard],
         // resolve: { aluno: AlunoDetalheResolver }
-},
+      },
       {
         path: ':id/editar', component: AlunoFormComponent,
         // canActivatedChild: [AlunosGuard],
         canDeactivate: [AlunosDeactivateGuard]
-},
+      },
     ]
   }
 ]

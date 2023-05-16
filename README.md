@@ -569,4 +569,4 @@ export class MyAuthGuard implements CanLoad {
 
 LEmbrando que esses são apenas exemplos básicos e você precisará adaptá-los de acordo com as suas necessidades específicas de autenticação e autorização. Além disso, é necessário fornecer esses guards no módulo de rotas, na propriedade `canActivateChild` ou `canLoad`, respectivamente, para que sejam aplicados corretamente nas rotas desejadas.
 
-## Aula 66 - Usando Guarda de rotas: CanDeactivate
+## Aula 67 - Usando Guarda de Rotas: CanDeactive com Inteface Genérica
