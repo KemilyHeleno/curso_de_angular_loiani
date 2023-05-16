@@ -12,7 +12,9 @@ import { AppRoutingModule } from './app.routing.module';
 import { RouterModule } from '@angular/router';
 import { AlunosModule } from './alunos/alunos.module';
 import { AuthService } from './login/auth.service';
-import { AuthGuard } from './guards/auth-guard';
+import { AuthGuard } from './guards/auth.guard';
+import { CursosGuard } from './guards/cursos.guard';
+import { AlunosGuard } from './guards/alunos.guard';
 // import { CursosModule } from './cursos/cursos.module';
 
 @NgModule({
@@ -30,7 +32,12 @@ import { AuthGuard } from './guards/auth-guard';
     // CursosModule,
     RouterModule.forRoot([])
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [
+    AuthService,
+    AuthGuard,
+    CursosGuard,
+    AlunosGuard
+  ],
   //providers: [CursosService],
   bootstrap: [AppComponent]
 })

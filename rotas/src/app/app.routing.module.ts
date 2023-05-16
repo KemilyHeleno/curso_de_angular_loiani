@@ -2,13 +2,14 @@
 // import { CursosGuard } from './guards/cursos.guard';
 // import { AlunosGuard } from './guards/alunos.guard';
 import { NgModule, ModuleWithProviders } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router"
+import { RouterModule, Routes, CanActivateChild } from '@angular/router';
 
 import { HomeComponent } from "./home/home.component";
 // import { CursosComponent } from "./cursos/cursos.component";
 import { LoginComponent } from "./login/login.component";
-import { AuthGuard } from "./guards/auth-guard";
-import { AlunosComponent } from "./alunos/alunos.component";
+import { AuthGuard } from "./guards/auth.guard";
+import { CursosGuard } from "./guards/cursos.guard";
+import { AlunosGuard } from "./guards/alunos.guard";
 // import { CursoDetalheComponent } from "./cursos/curso-detalhe/curso-detalhe.component";
 // import { CursoNaoEncontradoComponent } from "./cursos/curso-nao-encontrado/curso-nao-encontrado.component";
 // import { AuthGuard } from './guards/auth.guard';
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
   {
     path: 'cursos',
     loadChildren: () => import('../app/cursos/cursos.module').then(m => m.CursosModule),
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
+    canActivateChild: [CursosGuard]
   },
   // {
   //   path: 'alunos',
@@ -31,7 +33,8 @@ const appRoutes: Routes = [
   // {
   //   path: 'alunos',
   //   loadChildren: () => import('../app/alunos/alunos.module').then(m => m.AlunosModule),
-  //   canActivate: [AuthGuard]
+  //   canActivate: [AuthGuard],
+  //   canActivateChild: [AlunosGuard]
   // },
   {
     path: 'login',

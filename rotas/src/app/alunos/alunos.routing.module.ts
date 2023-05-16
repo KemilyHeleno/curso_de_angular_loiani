@@ -3,26 +3,27 @@ import { AlunoDetalheComponent } from './aluno-detalhe/aluno-detalhe.component';
 import { AlunosComponent } from './alunos.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { AlunosGuard } from '../guards/alunos.guard';
 
 const alunosRoutes = [
   {
     path: '', component: AlunosComponent,
-    // canActivatedChild: [AlunosGuard],
+    canActivatedChild: [AlunosGuard],
     children: [
       {
-        path: 'novo', component:
-          AlunoFormComponent
+        path: 'novo', component: AlunoFormComponent,
+        canActivatedChild: [AlunosGuard]
       },
       {
-        path: ':id',
-        component: AlunoDetalheComponent,
+        path: ':id', component: AlunoDetalheComponent,
+        canActivatedChild: [AlunosGuard],
         /* resolve: { aluno: AlunoDetalheResolver }*/
-      },
+},
       {
-        path: ':id/editar',
-        component: AlunoFormComponent,
+        path: ':id/editar', component: AlunoFormComponent,
+        canActivatedChild: [AlunosGuard],
         /* canDeactivate: [AlunosDeactivateGuard]*/
-      },
+},
     ]
   }
 ]
