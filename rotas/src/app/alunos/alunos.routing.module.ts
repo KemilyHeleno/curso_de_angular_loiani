@@ -10,24 +10,26 @@ import { AlunoDetalheResolver } from './guards/aluno-detalhe.resolver';
 const alunosRoutes = [
   {
     path: '', component: AlunosComponent,
-    canActivatedChild: [AlunosGuard],
-    children: [
-      {
-        path: 'novo', component: AlunoFormComponent,
-        // canActivatedChild: [AlunosGuard]
-      },
-      {
-        path: ':id', component: AlunoDetalheComponent,
-        // canActivatedChild: [AlunosGuard],
-        resolve: { aluno: AlunoDetalheResolver }
-      },
-      {
-        path: ':id/editar', component: AlunoFormComponent,
-        // canActivatedChild: [AlunosGuard],
-        canDeactivate: [AlunosDeactivateGuard]
-      },
-    ]}
-];
+  },
+  // canActivatedChild: [AlunosGuard],
+  // children: [
+  {
+    path: 'novo', component: AlunoFormComponent,
+    // canActivatedChild: [AlunosGuard]
+  },
+  {
+    path: ':id', component: AlunoDetalheComponent,
+    // canActivatedChild: [AlunosGuard],
+    resolve: { aluno: AlunoDetalheResolver }
+  },
+  {
+    path: ':id/editar', component: AlunoFormComponent,
+    // canActivatedChild: [AlunosGuard],
+    canDeactivate: [AlunosDeactivateGuard]
+  },
+]
+  // }
+// ];
 
 
 @NgModule({

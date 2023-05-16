@@ -10,13 +10,14 @@ import { Aluno } from '../aluno';
   styleUrls: ['./aluno-detalhe.component.css']
 })
 export class AlunoDetalheComponent implements OnInit, OnDestroy {
+  // aluno: any = '';
   aluno!: Aluno;
   inscricao!: Subscription;
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private alunosService: AlunosService
+    // private alunosService: AlunosService
   ) { }
 
   ngOnInit() {
@@ -25,14 +26,14 @@ export class AlunoDetalheComponent implements OnInit, OnDestroy {
     //     let id = params['id'];
     //     // console.log(id + ' aluno-detalhe')
     //     this.aluno = this.alunosService.getAluno(id);
-    //     // console.log(id + ' aluno-detalhe2 ')
-
-
+    //     // console.log(id + ' aluno-detalhe2')
     //   }
-    // )
+    // );
+
+    /////////////////////////////////////////////////////////////////////////////////////
 
     this.inscricao = this.route.data.subscribe(
-      (info: Data = {aluno: Aluno}) => {
+      (info: Data = { aluno: Aluno }) => {
         console.log(info);
         this.aluno = info['aluno'];
       }
@@ -46,6 +47,5 @@ export class AlunoDetalheComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.inscricao.unsubscribe();
   }
-
 
 }

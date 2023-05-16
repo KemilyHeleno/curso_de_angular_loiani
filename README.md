@@ -523,7 +523,7 @@ ___________________________________________________________________________
 ### forRoot X forChild
 
 - **forRoot** - é usado para configurar um módulo que deve ser importado no módulo raiz da aplicação, geralmente o `AppModule`. Ele é chamado somente uma vez no momento da inicialização da aplicação, normalmente no arquivo `app.module.ts`. O `forRoot`pode ser usado para definir configurações globais para aplicação, como provedores de serviços e configurações de rotas.
-- **forClhid** - é usado para configurar um módulo que será importado em outros módulos que não sejam o módulo raiz, geralmente módulos de recursps ou de funcionalidades específicas. É chamado em outros módulos da aplicação que não sejamo módulo raiz. O `forChild` é usado para definir configurações específicas de cada módulo filho, como rotas e ser viços específicos.
+- **forChild** - é usado para configurar um módulo que será importado em outros módulos que não sejam o módulo raiz, geralmente módulos de recursps ou de funcionalidades específicas. É chamado em outros módulos da aplicação que não sejamo módulo raiz. O `forChild` é usado para definir configurações específicas de cada módulo filho, como rotas e ser viços específicos.
 
 ### Resumindo...
 
@@ -531,13 +531,15 @@ Em reusmo, o `forRoot` é usado para configurar um módulo que deve ser importad
 
 ## Aula 64 - Usando Guarda de Rotas: CanActivate
 
-Na versão mais recente do Angular (Angular 12), você pode substituir o uso do `CanActivate` pelo uso d `CanActivatedChild` e `CanLoad`, depejndendo do seu caso de uso específico. Aqui está uma breve explicação sobre cada um deles:  
-* 1 - `CanActivatedChild`: Este guarda de rota é usado quando você deseja controlar o acesso a rotas filhas de um determinado componente. Ele verifica se o usuário tem permissão para ativar as rotas filho. Para usar o `CanActivatedChild`, você precisa implementar a interface `CanActivatedChild` e definir a lógica de autorização no método `canActivatedChild()`.  
+Na versão mais recente do Angular (Angular 12), você pode substituir o uso do `CanActivate` pelo uso d `CanActivatedChild` e `CanLoad`, depejndendo do seu caso de uso específico. Aqui está uma breve explicação sobre cada um deles:
 
-Exemplo de uso: 
+- 1 - `CanActivatedChild`: Este guarda de rota é usado quando você deseja controlar o acesso a rotas filhas de um determinado componente. Ele verifica se o usuário tem permissão para ativar as rotas filho. Para usar o `CanActivatedChild`, você precisa implementar a interface `CanActivatedChild` e definir a lógica de autorização no método `canActivatedChild()`.
+
+Exemplo de uso:
+
 ```
-import { Injectable } from '@angular/core';  
-import { CanActivatedChild, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';  
+import { Injectable } from '@angular/core';
+import { CanActivatedChild, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
 @Injectable()
 export class MyAuthGuard implements CanActivateChild {
@@ -550,10 +552,11 @@ export class MyAuthGuard implements CanActivateChild {
 }
 ```
 
-* 2 - `CanLoad`: Este guiarda de rota é usado quando você deseja controlar o acesso ao carregamento de módulos de rotas assíncronos (lazy-loading modules). Ele verifica se o usuário tem permissão para carregar o módulo.  
-Para usar o `CanLoad`, você precisa implementar a interface `CanLoad` e definir a lógica de autorização no método `canLoad()`.  
+- 2 - `CanLoad`: Este guiarda de rota é usado quando você deseja controlar o acesso ao carregamento de módulos de rotas assíncronos (lazy-loading modules). Ele verifica se o usuário tem permissão para carregar o módulo.  
+  Para usar o `CanLoad`, você precisa implementar a interface `CanLoad` e definir a lógica de autorização no método `canLoad()`.
 
 Exemplo de uso:
+
 ```
 import { Injectable } from '@angular/core';
 import { CanLoad, Route } from '@angular/router';
@@ -569,4 +572,5 @@ export class MyAuthGuard implements CanLoad {
 
 LEmbrando que esses são apenas exemplos básicos e você precisará adaptá-los de acordo com as suas necessidades específicas de autenticação e autorização. Além disso, é necessário fornecer esses guards no módulo de rotas, na propriedade `canActivateChild` ou `canLoad`, respectivamente, para que sejam aplicados corretamente nas rotas desejadas.
 
-## Aula 69 - Usando Guarda de Rotas: CanLoad: como não carregar o módulo sem permissão
+## Aula 70 - Definindo rota padrão e wildcard (rota não encontrada)
+
