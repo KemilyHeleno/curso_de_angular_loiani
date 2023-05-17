@@ -12,22 +12,22 @@ export class AlunosService {
 
   getAlunos() {
 
-    // console.log(this.alunos);
+    console.log(this.alunos + 'teste1');
     return this.alunos;
 
   }
   getAluno(id: number) {
     for (let i = 0; i < this.alunos.length; i++) {
-      // console.log(i);
+      console.log(i);
       let aluno = this.alunos[i];
       if (aluno.id == id) {
-        // console.log(' | ' + id + ' | ' + 'alunos.service')
-        // console.log('funcionou')
+        console.log(' | ' + id + ' | ' + 'alunos.service')
+        console.log('funcionou')
         return aluno;
       }
-      // console.log('falhou')
+      console.log('falhou')
     }
-    // console.log('eita falhou mesmo')
+    console.log('eita falhou mesmo')
 
     return null
   }

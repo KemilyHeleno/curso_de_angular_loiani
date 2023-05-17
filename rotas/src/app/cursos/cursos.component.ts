@@ -15,7 +15,8 @@ import { CursosModule } from './cursos.module';
 export class CursosComponent implements OnInit {
 
   cursos: any[] = [''];
-  pagina: number = 0;
+  pagina1: number = 0;
+  pagina2: number = 0;
   inscricao!: Subscription;
 
   constructor(
@@ -29,7 +30,8 @@ export class CursosComponent implements OnInit {
 
     this.inscricao = this.route.queryParams.subscribe(
       (queryParams: any) => {
-        this.pagina = queryParams['pagina'];
+        this.pagina1 = queryParams['pagina'];
+        console.log(this.pagina1 + 'teste1')
       }
     );
   }
@@ -39,9 +41,10 @@ export class CursosComponent implements OnInit {
   }
 
   proximaPagina() {
-    //this.pagina++;
+    this.pagina2++;
     this.router.navigate(['/cursos'],
-      { queryParams: { 'pagina': ++this.pagina } });
+      { queryParams: { 'pagina': +this.pagina2 } });
+    console.log('pagina ' + this.pagina2 + 'teste2')
   }
 
 }

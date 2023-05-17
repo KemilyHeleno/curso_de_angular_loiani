@@ -1,7 +1,7 @@
 <p>
   Lista de Cursos
 </p>
-<p>Página: {{ pagina }}</p>
+<p>Página: {{ pagina1 }}</p>
 <div class="collection">
   <a class="collection-item" *ngFor="let curso of cursos" [routerLink]="['/cursos', curso.id]">
     {{ curso.nome }}

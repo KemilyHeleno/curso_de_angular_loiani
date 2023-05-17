@@ -24,8 +24,6 @@ import { AlunosDeactivateGuard } from "../guards/alunos-deactivate.guard";
   ],
   providers: [
     AlunosService,
-    AlunosComponent,
-    Router,
     AlunosDeactivateGuard
   ],
 })

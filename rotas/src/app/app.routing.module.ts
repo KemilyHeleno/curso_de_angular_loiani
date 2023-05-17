@@ -13,10 +13,6 @@ import { AlunosComponent } from "./alunos/alunos.component";
 // import { CursoDetalheComponent } from "./cursos/curso-detalhe/curso-detalhe.component";
 // import { CursoNaoEncontradoComponent } from "./cursos/curso-nao-encontrado/curso-nao-encontrado.component";
 
-
-
-
-
 const appRoutes: Routes = [
   {
     path: 'cursos',
@@ -31,14 +27,16 @@ const appRoutes: Routes = [
   //   canActivate: [AuthGuard],
   //   canActivateChild: [AlunosGuard]
   //   canLoad: [AuthGuard]
-
-
   // },
+
   {
     path: 'alunos',
+    //component: AlunosComponent,
     loadChildren: () => import('../app/alunos/alunos.module').then(m => m.AlunosModule),
     canActivate: [AuthGuard],
-    canActivateChild: [AlunosGuard]
+    canActivateChild: [AlunosGuard],
+    canLoad: [AuthGuard]
+
   },
   {
     path: 'login',
@@ -56,7 +54,7 @@ const appRoutes: Routes = [
   {
     path: '**',
     component: PaginaNaoEncontradaComponent,
-    //canActivate: [AuthGuard]
+    canActivate: [AuthGuard]
   }
 ];
 
