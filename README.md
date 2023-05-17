@@ -572,6 +572,24 @@ export class MyAuthGuard implements CanLoad {
 
 LEmbrando que esses são apenas exemplos básicos e você precisará adaptá-los de acordo com as suas necessidades específicas de autenticação e autorização. Além disso, é necessário fornecer esses guards no módulo de rotas, na propriedade `canActivateChild` ou `canLoad`, respectivamente, para que sejam aplicados corretamente nas rotas desejadas.
 
-## Aula 71 - Rotas - Estilo de url: HTML5 ou usando #
+## Aula 72 - Formulários (template vs data)
 
- 
+### Introdução - Forms no angular
+
+#### Template Driven
+
+- Formulário é criado e configurado no HTML
+- Validações são feitas ao template HTML
+- Angular cria/deduz um FormGroup do cod HTML  
+  Formulários reativos, nós usamos diretivas tanto para o formulário quanto para os campos de input, select, text e etc, para o angular saber que nós querremos gerenciar todas essas informuações utilizando a própria API
+- Valores do form são submetidos com ngSubmit
+
+#### Data Driven (Reativo)
+
+- Formulário é criado e configurado no Componente  
+  Toda a configuração fica no componente, apenas os itens mais básicos ficam no HTML
+- Validações são feitas no Component  
+  No HTML é feita a referencia ao componente e no componente são feitas as validações
+- Angular usa o FormGroup criado no Component
+- Form já está no Component e não precisa do ngSubmit  
+  No lugar podemos utilizar o evento de click do botão que representa o submit do formulário
